@@ -13,12 +13,12 @@ public class PlayerTwoScript : MonoBehaviour
     void Update()
     {
         //getting inputs from the player
-        //horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal2");
         forwardInput = Input.GetAxis("Vertical2");
 
         //moves the vehicle forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         //turns the vehicle
-        //transform.Rotate(Vector3.up, horizontalInput * Time.deltaTime * turnSpeed);
+        transform.Rotate(Vector3.up, horizontalInput * Time.deltaTime * turnSpeed);
     }
 }
